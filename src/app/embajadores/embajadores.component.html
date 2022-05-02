@@ -1,0 +1,15 @@
+<h1>Conoce nuestros embajadores</h1>
+<h2>Aquí encontraras los cuidadores perfectos para nuestros amiguitos.</h2>
+
+<div class="container">
+    <div *ngFor="let e of embajadores" class="emb-card">
+        <label><img src="/assets/img/{{e.imagen}}.png"></label>
+        <label id="name">{{e.nombre}}</label>
+        <label id="name">{{e.apellidos}}</label>
+        <label>Edad: {{e.edad}} Años</label>
+        <label>Experiencia: {{e.experiencia}}</label>
+        <label>{{e.calificacion}}</label>
+        <label>{{e.tarifa}} COP/Día</label>
+        <a routerLink="/Embajadores" class="button">Contactar</a>
+    </div>
+</div>

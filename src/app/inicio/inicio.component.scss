@@ -1,0 +1,218 @@
+* {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    #name {
+        margin: 0;
+    }
+    .inner-container,
+    .inner-containerd {
+        margin-bottom: 5vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .inner-container {
+        flex-direction: column;
+        width: 50%;
+    }
+    .inner-containerd {
+        width: 40%;
+        .blob {
+            width: 80%;
+            height: auto;
+            object-fit: contain;
+            filter: invert(25%) sepia(97%) saturate(547%) hue-rotate(158deg) brightness(98%) contrast(90%);
+        }
+        .blobt {
+            width: 80%;
+            height: auto;
+            object-fit: contain;
+            filter: invert(80%) sepia(17%) saturate(467%) hue-rotate(82deg) brightness(88%) contrast(91%);
+        }
+        .hand {
+            width: 30%;
+            height: auto;
+            object-fit: contain;
+            z-index: 8;
+            position: absolute;
+            transform: rotate(15deg);
+            filter: drop-shadow(22px -15px 5px rgba(0, 0, 0, 0.5));
+            animation: bounce 3s infinite alternate-reverse;
+        }
+        @keyframes bounce {
+            from {
+                transform: translateY(-2.5vh);
+            }
+            to {
+                transform: translateY(2.5vh);
+            }
+        }
+    }
+}
+
+.container-fake {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    #name {
+        margin: 0;
+    }
+    .inner-container,
+    .inner-containerd {
+        margin-bottom: 5vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .inner-container {
+        flex-direction: column;
+        width: 50%;
+    }
+    .inner-containerd {
+        width: 40%;
+        .blob {
+            width: 80%;
+            height: auto;
+            object-fit: contain;
+            filter: invert(25%) sepia(97%) saturate(547%) hue-rotate(158deg) brightness(98%) contrast(90%);
+        }
+        .blobt {
+            width: 80%;
+            height: auto;
+            object-fit: contain;
+            filter: invert(80%) sepia(17%) saturate(467%) hue-rotate(82deg) brightness(88%) contrast(91%);
+        }
+        .hand {
+            width: 30%;
+            height: auto;
+            object-fit: contain;
+            z-index: 8;
+            position: absolute;
+            transform: rotate(15deg);
+            filter: drop-shadow(22px -15px 5px rgba(0, 0, 0, 0.5));
+            animation: bounce 3s infinite alternate-reverse;
+        }
+        @keyframes bounce {
+            from {
+                transform: translateY(-2.5vh);
+            }
+            to {
+                transform: translateY(2.5vh);
+            }
+        }
+    }
+}
+
+.button {
+    height: 5vh;
+    width: auto;
+    border: 1px solid #136185;
+    background-color: #93c09e;
+    padding: 2vh 4vh 2vh 4vh;
+    border-radius: 3vh;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-size: 3vh;
+    font-family: 'Montserrat', sans-serif;
+    color: #136185;
+}
+
+@media screen and (max-width: 800px) {
+    .container-fake {
+        flex-direction: column-reverse;
+        .inner-container,
+        .inner-containerd {
+            width: 100%;
+            #name {
+                font-size: 3vh;
+                margin: 0vh;
+                text-align: center;
+            }
+            #subtitle {
+                font-size: 2.5vh;
+                padding-left: 5vh;
+                padding-right: 5vh;
+                text-align: justify;
+            }
+        }
+        .inner-containerd {
+            .blob {
+                width: 70%;
+                height: auto;
+                object-fit: contain;
+                filter: invert(25%) sepia(97%) saturate(547%) hue-rotate(158deg) brightness(98%) contrast(90%);
+            }
+            .blobt {
+                width: 70%;
+                height: auto;
+                object-fit: contain;
+                filter: invert(80%) sepia(17%) saturate(467%) hue-rotate(82deg) brightness(88%) contrast(91%);
+            }
+            .hand {
+                width: 50%;
+                height: auto;
+                object-fit: contain;
+                z-index: 8;
+                position: absolute;
+                transform: rotate(15deg);
+                filter: drop-shadow(22px -15px 5px rgba(0, 0, 0, 0.5));
+                animation: bounce 3s infinite alternate-reverse;
+            }
+        }
+    }
+    .container {
+        flex-direction: column;
+        .inner-container,
+        .inner-containerd {
+            width: 100%;
+            #name {
+                font-size: 3vh;
+                margin: 0vh;
+                text-align: center;
+            }
+            #subtitle {
+                font-size: 2.5vh;
+                padding-left: 5vh;
+                padding-right: 5vh;
+                text-align: justify;
+            }
+        }
+        .inner-containerd {
+            .blob {
+                width: 70%;
+                height: auto;
+                object-fit: contain;
+                filter: invert(25%) sepia(97%) saturate(547%) hue-rotate(158deg) brightness(98%) contrast(90%);
+            }
+            .blobt {
+                width: 70%;
+                height: auto;
+                object-fit: contain;
+                filter: invert(80%) sepia(17%) saturate(467%) hue-rotate(82deg) brightness(88%) contrast(91%);
+            }
+            .hand {
+                width: 50%;
+                height: auto;
+                object-fit: contain;
+                z-index: 8;
+                position: absolute;
+                transform: rotate(15deg);
+                filter: drop-shadow(22px -15px 5px rgba(0, 0, 0, 0.5));
+                animation: bounce 3s infinite alternate-reverse;
+            }
+        }
+    }
+    .button {
+        font-size: 2.5vh;
+    }
+}

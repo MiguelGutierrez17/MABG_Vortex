@@ -6,5 +6,25 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'MABG_Vortex';
+  title = 'PetFriends';
+
+  ResponsiveSwitch(): void {
+    var x = document.getElementById("header_");
+    if (x !== null) {
+      if (x.className === "header") {
+        x.className = "responsive";
+      } else {
+        x.className = "header";
+      }
+    }
+  }
+
+  RemoveMenu(): void {
+    var x = document.getElementById("header_");
+    if (x !== null) {
+      x.classList.remove("responsive");
+      x.classList.add("header");
+    }
+  }
+  
 }

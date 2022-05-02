@@ -1,0 +1,35 @@
+<div class="container">
+    <div class="pack">
+        <div class="question"><label>Nombres*</label><input type="text" (blur)="validarFormulario($event)"></div>
+        <div class="question"><label>Apellidos*</label><input type="text" (blur)="validarFormulario($event)"></div>
+    </div>
+    <div class="pack">
+        <div class="question"><label>Dirección*</label><input type="text" (blur)="validarFormulario($event)"></div>
+        <div class="question"><label>Correo electrónico*</label><input type="email" (blur)="validarFormulario($event)"></div>
+        <div class="question"><label>Celular*</label><input type="number" (blur)="validarFormulario($event)"></div>
+    </div>
+
+    <div class="pack">
+        <div class="question">
+            <label>¿Qué mascota tienes?*</label>
+            <select (change)="validarFormulario($event)">
+                <option value="">Seleccionar</option>
+                <option value="perro">Perro</option>
+                <option value="gato">Gato</option>
+                <option value="hamster">Hamster</option>
+                <option value="otro">Otro</option>
+            </select>
+        </div>
+        <div class="question"><label>¿Cuál?</label><input class="success-input" type="text"></div>
+    </div>
+    <label id="mensaje">{{mensaje}}</label>
+
+    <div class="spinner" id="spinnerid">
+        <div class="bounce1"></div>
+        <div class="bounce2"></div>
+        <div class="bounce3"></div>
+    </div>
+
+    <button id="sender" (click)="enviarRegistro($event)" class="send-init">Registrarme</button>
+
+</div>

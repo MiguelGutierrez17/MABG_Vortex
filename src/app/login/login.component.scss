@@ -1,0 +1,169 @@
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .pack {
+        display: flex;
+        flex-direction: column;
+        margin: 3vh;
+    }
+    .question {
+        display: flex;
+        flex-direction: column;
+        width: auto;
+        height: auto;
+        font-family: 'Montserrat', sans-serif;
+        margin-left: 2vh;
+        margin-right: 2vh;
+        label {
+            margin: 2vh;
+            font-size: 2.5vh;
+            text-align: center;
+        }
+        input,
+        select {
+            width: 25vw;
+            height: 7vh;
+            border: 1px solid #136185;
+            border-radius: 2vh;
+            text-align: center;
+            font-family: 'Montserrat', sans-serif;
+        }
+        .error-input {
+            border: 1px solid brown;
+        }
+        .success-input {
+            border: 1px solid green;
+        }
+    }
+}
+
+button {
+    height: 8vh;
+    width: auto;
+    padding: 0vh 5vh 0vh 5vh;
+    margin: 1vh 0vh 1vh 0vh;
+    margin: 2vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    font-size: 2.5vh;
+    border-radius: 2vh;
+    border: 1px solid #93c09e;
+    background-color: #136185;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#mensaje {
+    font-size: 2.5vh;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+}
+
+.send-init {
+    opacity: 50%;
+    cursor: not-allowed;
+}
+
+.spinner {
+    margin: 5vh 0vh 5vh 0vh;
+    width: 70px;
+    text-align: center;
+    display: none;
+}
+
+.spinner-success {
+    margin: 5vh 0vh 5vh 0vh;
+    width: 70px;
+    text-align: center;
+    display: flex;
+}
+
+.spinner>div {
+    width: 18px;
+    height: 18px;
+    background-color: #93c09e;
+    border-radius: 100%;
+    display: inline-block;
+    -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+    animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+}
+
+.spinner-success>div {
+    width: 18px;
+    height: 18px;
+    background-color: #93c09e;
+    border-radius: 100%;
+    display: inline-block;
+    -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+    animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+}
+
+.spinner .bounce1 {
+    -webkit-animation-delay: -0.32s;
+    animation-delay: -0.32s;
+}
+
+.spinner .bounce2 {
+    -webkit-animation-delay: -0.16s;
+    animation-delay: -0.16s;
+}
+
+.spinner-success .bounce1 {
+    -webkit-animation-delay: -0.32s;
+    animation-delay: -0.32s;
+}
+
+.spinner-success .bounce2 {
+    -webkit-animation-delay: -0.16s;
+    animation-delay: -0.16s;
+}
+
+@-webkit-keyframes sk-bouncedelay {
+    0%,
+    80%,
+    100% {
+        -webkit-transform: scale(0)
+    }
+    40% {
+        -webkit-transform: scale(1.0)
+    }
+}
+
+@keyframes sk-bouncedelay {
+    0%,
+    80%,
+    100% {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+    }
+    40% {
+        -webkit-transform: scale(1.0);
+        transform: scale(1.0);
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .container {
+        .pack {
+            flex-direction: column;
+            margin: 2vh;
+        }
+        .question {
+            margin-right: 2vh;
+            label {
+                margin: 1vh 0vh 1vh 0vh;
+            }
+            input,
+            select {
+                width: 70vw;
+            }
+        }
+    }
+}

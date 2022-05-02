@@ -1,0 +1,27 @@
+<div class="container">
+    <div *ngFor="let p of planes" class="plan-card">
+        <label><img src="/assets/img/{{p.imagen}}.png"></label>
+        <label id="name">{{p.nombre}}</label>
+        <label>{{p.descripcion}}</label>
+        <label id="price">Precio inicial: {{p.precio_ini}} COP/Día</label>
+        <label>Precio final: {{p.precio_fin}} COP/Día</label>
+        <a routerLink="/Planes" class="button">Adquirir</a>
+    </div>
+</div>
+
+<h1>Calculadora de tarifa</h1>
+<h2>Escoge tu embajador favorito y el plan que deseas cotizar.</h2>
+<h2>Te diremos la tarifa por día para cuidar a tu mascota.</h2>
+<div class="container">
+    <select (change)="capturarValorE($event)">
+        <option value="">Seleccionar</option>
+        <option *ngFor="let e of embajadores" value="{{e.tarifa}}">{{e.nombre}} - {{e.tarifa}} COP/Día</option>
+    </select>
+
+    <select (change)="capturarValorP($event)">
+        <option value="">Seleccionar</option>
+        <option *ngFor="let p of planes" value="{{p.descuento}}">{{p.nombre}}</option>
+    </select>
+</div>
+
+<h2>El valor de cada día seria {{embajador_valor * tarifa_valor}} COP/Día</h2>
